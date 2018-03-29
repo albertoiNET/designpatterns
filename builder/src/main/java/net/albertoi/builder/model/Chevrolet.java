@@ -25,6 +25,7 @@ public class Chevrolet {
         return color;
     }
 
+
     @Override
     public String toString() {
         return "Chevrolet{" + name + ", " + color + ", " + model + ", " + equipment + '}';
