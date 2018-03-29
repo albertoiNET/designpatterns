@@ -22,7 +22,7 @@ public class Singleton {
      *
      * @return An unique instance of Singleton
      */
-    public static Singleton getInstance() {
+    static Singleton getInstance() {
         createInstanceIfNeeded();
         System.out.println("Returning instance");
         return singleton;
