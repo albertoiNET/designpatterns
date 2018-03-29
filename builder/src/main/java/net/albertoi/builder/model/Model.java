@@ -26,10 +26,6 @@ public class Model {
         return this;
     }
 
-    public Model build() {
-        return this;
-    }
-
 
     @Override
     public String toString() {
