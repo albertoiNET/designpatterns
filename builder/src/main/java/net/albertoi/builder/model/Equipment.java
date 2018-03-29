@@ -20,10 +20,6 @@ public class Equipment {
         return this;
     }
 
-    public Equipment build() {
-        return this;
-    }
-
     @Override
     public String toString() {
         return "Equipment{" +
