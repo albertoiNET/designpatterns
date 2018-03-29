@@ -11,16 +11,16 @@ public class CamaroBuilder extends ChevroletBuilder {
 
     @Override
     public void buildModel() {
-        chevrolet.getModel().setYear(2018).setGasoline(true).setSegment('B');
+        chevrolet.getModel().setName("GT").setYear(2018).setGasoline(true).setSegment('B').build();
     }
 
     @Override
     public void buildEquipment() {
-        chevrolet.getEquipment().setName("Full").setAir(true).setPowerWindow(true);
+        chevrolet.getEquipment().setName("Full").setAir(true).setPowerWindow(true).build();
     }
 
     @Override
     public void buildColor() {
-        chevrolet.getColor().setName("Yellow").setHex(0xC8F945);
+        chevrolet.getColor().setName("Yellow").setHex(0xC8F945).build();
     }
 }

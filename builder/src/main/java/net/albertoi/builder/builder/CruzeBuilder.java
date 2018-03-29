@@ -11,16 +11,16 @@ public class CruzeBuilder extends ChevroletBuilder {
 
     @Override
     public void buildModel() {
-        chevrolet.getModel().setYear(2011).setGasoline(true).setSegment('C');
+        chevrolet.getModel().setName("LTZ").setYear(2011).setGasoline(true).setSegment('C').build();
     }
 
     @Override
     public void buildEquipment() {
-        chevrolet.getEquipment().setName("Basic").setAir(true).setPowerWindow(true);
+        chevrolet.getEquipment().setName("Basic").setAir(true).setPowerWindow(true).build();
     }
 
     @Override
     public void buildColor() {
-        chevrolet.getColor().setName("Red").setHex(0xEF3340);
+        chevrolet.getColor().setName("Red").setHex(0xEF3340).build();
     }
 }
