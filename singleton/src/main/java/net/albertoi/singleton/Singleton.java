@@ -1,7 +1,12 @@
 package net.albertoi.singleton;
 
-public class Singleton {
+import java.util.logging.Logger;
+
+class Singleton {
     private static Singleton singleton;
+
+    private static final Logger LOGGER = Logger.getLogger(Singleton.class.getName());
+
 
     private Singleton() {
         // Do nothing
@@ -24,7 +29,7 @@ public class Singleton {
      */
     static Singleton getInstance() {
         createInstanceIfNeeded();
-        System.out.println("Returning instance");
+        LOGGER.info("Returning instance");
         return singleton;
     }
 
@@ -32,7 +37,7 @@ public class Singleton {
     /**
      * Dummy method
      */
-    public void sayBye() {
-        System.out.println("Bye!");
+    void sayBye() {
+        LOGGER.info("Bye!");
     }
 }
