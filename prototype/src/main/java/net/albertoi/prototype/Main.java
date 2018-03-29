@@ -4,7 +4,13 @@ import net.albertoi.prototype.factory.PrototypeFactory;
 import net.albertoi.prototype.model.Cluster;
 import net.albertoi.prototype.model.Node;
 
+import java.util.logging.Logger;
+
 public class Main {
+
+    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+
+
     public static void main(String[] args) {
         final String miniClusterLabel = "Min cluster List";
         final String mediumClusterLabel = "Med cluster List";
@@ -33,9 +39,9 @@ public class Main {
         }
         PrototypeFactory.addPrototype(sizeLCluster.getName(), sizeLCluster);
 
-        System.out.println(PrototypeFactory.getPrototype(miniClusterLabel));
-        System.out.println(PrototypeFactory.getPrototype(mediumClusterLabel));
-        System.out.println(PrototypeFactory.getPrototype(bigClusterLabel));
+        LOGGER.info(PrototypeFactory.getPrototype(miniClusterLabel).toString());
+        LOGGER.info(PrototypeFactory.getPrototype(mediumClusterLabel).toString());
+        LOGGER.info(PrototypeFactory.getPrototype(bigClusterLabel).toString());
 
     }
 
