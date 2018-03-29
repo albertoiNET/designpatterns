@@ -14,10 +14,6 @@ public class Color {
         return this;
     }
 
-    public Color build() {
-        return this;
-    }
-
     @Override
     public String toString() {
         return "Color{" +
