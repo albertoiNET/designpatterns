@@ -2,10 +2,8 @@ package net.albertoi.prototype.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 import net.albertoi.prototype.factory.Prototype;
 
-@ToString
 public class Node implements Prototype<Node> {
     @Getter
     @Setter
@@ -21,12 +19,20 @@ public class Node implements Prototype<Node> {
     }
 
     @Override
-    public Node copyClone() {
+    public Node shallowCopy() {
         return new Node(this.nodeName, this.size);
     }
 
     @Override
-    public Node deepClone() {
-        return copyClone();
+    public Node deepCopy() {
+        return shallowCopy();
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "nodeName='" + nodeName + '\'' +
+                ", size=" + size +
+                '}';
     }
 }
