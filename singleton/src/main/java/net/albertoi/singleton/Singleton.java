@@ -18,7 +18,7 @@ class Singleton {
     private static synchronized void createInstanceIfNeeded() {
         if (singleton == null) {
             singleton = new Singleton();
-            System.out.println("Instance created");
+            LOGGER.info("Instance created");
         }
     }
 
