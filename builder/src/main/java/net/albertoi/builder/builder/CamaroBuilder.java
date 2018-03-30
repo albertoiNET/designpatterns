@@ -15,12 +15,13 @@ public class CamaroBuilder extends ChevroletBuilder {
     }
 
     @Override
+    public void buildColor() {
+        chevrolet.getColor().setName("Yellow").setHex(0xC8F945);
+    }
+
+    @Override
     public void buildEquipment() {
         chevrolet.getEquipment().setName("Full").setAir(true).setPowerWindow(true);
     }
 
-    @Override
-    public void buildColor() {
-        chevrolet.getColor().setName("Yellow").setHex(0xC8F945);
-    }
 }

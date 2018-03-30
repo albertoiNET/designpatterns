@@ -39,9 +39,9 @@ public class Main {
         }
         PrototypeFactory.addPrototype(sizeLCluster.getName(), sizeLCluster);
 
-        LOGGER.info(PrototypeFactory.getPrototype(miniClusterLabel).toString());
-        LOGGER.info(PrototypeFactory.getPrototype(mediumClusterLabel).toString());
-        LOGGER.info(PrototypeFactory.getPrototype(bigClusterLabel).toString());
+        LOGGER.info(PrototypeFactory.getPrototype(miniClusterLabel)::toString);
+        LOGGER.info(PrototypeFactory.getPrototype(mediumClusterLabel)::toString);
+        LOGGER.info(PrototypeFactory.getPrototype(bigClusterLabel)::toString);
 
     }
 

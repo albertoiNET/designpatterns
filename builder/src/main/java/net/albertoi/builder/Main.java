@@ -17,12 +17,12 @@ public class Main {
         carShop.construct();
         Chevrolet cruze = carShop.getChevrolet();
 
-        LOGGER.info(cruze.toString());
+        LOGGER.info(cruze::toString);
 
         carShop.setChevroletBuilder(new CamaroBuilder());
         carShop.construct();
         Chevrolet camaro = carShop.getChevrolet();
 
-        LOGGER.info(camaro.toString());
+        LOGGER.info(camaro::toString);
     }
 }
