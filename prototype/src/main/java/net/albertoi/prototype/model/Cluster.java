@@ -28,7 +28,7 @@ public class Cluster implements Prototype<Cluster> {
 
 
     @Override
-    public Cluster clone() {
+    public Cluster copyClone() {
         Cluster clone = new Cluster(name);
         clone.setNodes(nodes);
         return clone;
@@ -38,7 +38,7 @@ public class Cluster implements Prototype<Cluster> {
     public Cluster deepClone() {
         List<Node> clonedNodes = new ArrayList<>();
         for (Node node : nodes) {
-            Node cloneItem = node.clone();
+            Node cloneItem = node.copyClone();
             clonedNodes.add(cloneItem);
         }
 

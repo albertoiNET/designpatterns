@@ -20,14 +20,13 @@ public class Node implements Prototype<Node> {
         this.size = size;
     }
 
-
     @Override
-    public Node clone() {
+    public Node copyClone() {
         return new Node(this.nodeName, this.size);
     }
 
     @Override
     public Node deepClone() {
-        return clone();
+        return copyClone();
     }
 }
