@@ -2,13 +2,11 @@ package net.albertoi.prototype.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 import net.albertoi.prototype.factory.Prototype;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@ToString
 public class Cluster implements Prototype<Cluster> {
     @Getter
     @Setter
@@ -28,22 +26,30 @@ public class Cluster implements Prototype<Cluster> {
 
 
     @Override
-    public Cluster copyClone() {
+    public Cluster shallowCopy() {
         Cluster clone = new Cluster(name);
         clone.setNodes(nodes);
         return clone;
     }
 
     @Override
-    public Cluster deepClone() {
+    public Cluster deepCopy() {
         List<Node> clonedNodes = new ArrayList<>();
         for (Node node : nodes) {
-            Node cloneItem = node.copyClone();
+            Node cloneItem = node.shallowCopy();
             clonedNodes.add(cloneItem);
         }
 
         Cluster clone = new Cluster(name);
         clone.setNodes(clonedNodes);
         return clone;
+    }
+
+    @Override
+    public String toString() {
+        return "Cluster{" +
+                "name='" + name + '\'' +
+                ", nodes=" + nodes +
+                '}';
     }
 }
