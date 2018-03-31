@@ -13,6 +13,10 @@ public class Chevrolet {
         this.color = new Color();
     }
 
+    public String getName() {
+        return name;
+    }
+
     public Model getModel() {
         return model;
     }
