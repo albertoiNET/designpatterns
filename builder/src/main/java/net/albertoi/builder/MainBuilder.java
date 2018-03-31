@@ -6,9 +6,9 @@ import net.albertoi.builder.model.Chevrolet;
 
 import java.util.logging.Logger;
 
-public class Main {
+public class MainBuilder {
 
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(MainBuilder.class.getName());
 
     public static void main(String[] args) {
         CarShop carShop = new CarShop();
