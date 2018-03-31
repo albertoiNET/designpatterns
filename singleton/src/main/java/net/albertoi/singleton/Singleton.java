@@ -7,7 +7,6 @@ class Singleton {
 
     private static final Logger LOGGER = Logger.getLogger(Singleton.class.getName());
 
-
     private Singleton() {
         // Do nothing
     }
