@@ -6,9 +6,9 @@ import net.albertoi.prototype.model.Node;
 
 import java.util.logging.Logger;
 
-public class Main {
+public class MainPrototyoe {
 
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(MainPrototyoe.class.getName());
 
 
     public static void main(String[] args) {
