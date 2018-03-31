@@ -5,6 +5,10 @@ install: true
 jdk:
   - oraclejdk9
 
+cache:
+  directories:
+  - $HOME/.m2
+
 script:
   - mvn clean verify install sonar:sonar
 
