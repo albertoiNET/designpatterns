@@ -25,7 +25,7 @@ public class BuilderTest {
 
         // Then
         Assert.assertNotNull(carShop.getChevrolet().toString());
-        Assert.assertEquals(carShop.getChevrolet().getName(), "Cruze");
+        Assert.assertEquals("Cruze", carShop.getChevrolet().getName());
     }
 
     @Test
@@ -38,6 +38,6 @@ public class BuilderTest {
 
         // Then
         Assert.assertNotNull(carShop.getChevrolet().toString());
-        Assert.assertEquals(carShop.getChevrolet().getName(), "Camaro");
+        Assert.assertEquals("Camaro", carShop.getChevrolet().getName());
     }
 }

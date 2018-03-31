@@ -6,34 +6,31 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ClusterTest {
+    private static final String EUR ="EUROPE";
     private Cluster clusterOriginalEurope;
+
 
     @Before
     public void setup() {
         //Given
-        clusterOriginalEurope = new Cluster("EUROPE");
+        clusterOriginalEurope = new Cluster("EUR");
         Node nodeOriginalMadrid = new Node("Madrid", 20480);
         Node nodeOriginalRome = new Node("Rome", 40960);
         Node nodeOriginalLondon = new Node("London", 10240);
 
-        List<Node> europeNodeList = new ArrayList<>();
-        europeNodeList.add(nodeOriginalMadrid);
-        europeNodeList.add(nodeOriginalRome);
-        europeNodeList.add(nodeOriginalLondon);
-        clusterOriginalEurope.setNodes(europeNodeList);
+        clusterOriginalEurope.addNode(nodeOriginalMadrid);
+        clusterOriginalEurope.addNode(nodeOriginalRome);
+        clusterOriginalEurope.addNode(nodeOriginalLondon);
     }
 
     @Test
     public void testShallowCopy() {
 
-        //When
+        // When
         Cluster clusterShallowCopy = clusterOriginalEurope.shallowCopy();
 
-        //Then it seems equals
+        // Then it seems equals
         Assert.assertEquals(clusterShallowCopy.toString(), clusterOriginalEurope.toString());
 
         // Changes on deep objects are by reference
@@ -41,6 +38,7 @@ public class ClusterTest {
 
         // So the reference can't change values
         Assert.assertEquals(clusterShallowCopy.getNodes().get(0), clusterOriginalEurope.getNodes().get(0));
+        Assert.assertEquals(EUR, clusterShallowCopy.getName());
 
     }
 
@@ -50,7 +48,7 @@ public class ClusterTest {
         //When
         Cluster clusterShallowCopy = clusterOriginalEurope.deepCopy();
 
-        //Then it seems equals
+        // Then it seems equals
         Assert.assertEquals(clusterShallowCopy.toString(), clusterOriginalEurope.toString());
 
         // Deep objects are created by calling clone of all child objects
@@ -58,8 +56,6 @@ public class ClusterTest {
 
         // So the value is different
         Assert.assertNotEquals(clusterShallowCopy.getNodes().get(0), clusterOriginalEurope.getNodes().get(0));
-
+        Assert.assertEquals(EUR, clusterShallowCopy.getName());
     }
-
-
 }
