@@ -9,7 +9,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestCluster {
+public class ClusterTest {
     private Cluster clusterOriginalEurope;
 
     @Before
