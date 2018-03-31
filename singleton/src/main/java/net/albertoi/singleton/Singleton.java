@@ -32,12 +32,4 @@ class Singleton {
         LOGGER.info("Returning instance");
         return singleton;
     }
-
-
-    /**
-     * Dummy method
-     */
-    void sayBye() {
-        LOGGER.info("Bye!");
-    }
 }

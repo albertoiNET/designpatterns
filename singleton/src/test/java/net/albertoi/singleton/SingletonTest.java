@@ -8,6 +8,7 @@ public class SingletonTest {
     @Test
     public void testGetInstance(){
         Assert.assertNotNull(Singleton.getInstance());
+        Assert.assertNotNull(Singleton.getInstance());
     }
 }
 
