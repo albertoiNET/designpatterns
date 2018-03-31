@@ -23,6 +23,7 @@
         <junit.version>4.12</junit.version>
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
 
+        <sonar.exclusions>**/Main*.java</sonar.exclusions>
         <sonar.host.url>${env.SONAR_HOST_URL}</sonar.host.url>
         <sonar.login>${env.SONAR_TOKEN}</sonar.login>
         <sonar.organization>${env.SONAR_ORGANIZATION}</sonar.organization>
