@@ -10,5 +10,10 @@ public class SingletonTest {
         Assert.assertNotNull(Singleton.getInstance());
         Assert.assertNotNull(Singleton.getInstance());
     }
+
+    @Test
+    public void testUniqueInstance(){
+        Assert.assertEquals(Singleton.getInstance() , Singleton.getInstance());
+    }
 }
 
