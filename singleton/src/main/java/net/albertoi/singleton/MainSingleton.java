@@ -2,11 +2,8 @@ package net.albertoi.singleton;
 
 class MainSingleton {
     public static void main(String[] args) {
-        Singleton singleton1 = Singleton.getInstance();
-        Singleton singleton2 = Singleton.getInstance();
+        Singleton.getInstance();
+        Singleton.getInstance();
 
-        // Do dumb stuff
-        singleton1.sayBye();
-        singleton2.sayBye();
     }
 }
