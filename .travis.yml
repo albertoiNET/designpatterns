@@ -6,5 +6,5 @@ jdk:
   - oraclejdk9
 
 script:
-  - mvn clean verify install
+  - mvn clean verify install sonar:sonar
 
