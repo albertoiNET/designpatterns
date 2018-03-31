@@ -7,14 +7,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ClusterTest {
-    private static final String EUR ="EUROPE";
+    private static final String EUROPE ="EUROPE";
     private Cluster clusterOriginalEurope;
 
 
     @Before
     public void setup() {
         //Given
-        clusterOriginalEurope = new Cluster("EUR");
+        clusterOriginalEurope = new Cluster(EUROPE);
         Node nodeOriginalMadrid = new Node("Madrid", 20480);
         Node nodeOriginalRome = new Node("Rome", 40960);
         Node nodeOriginalLondon = new Node("London", 10240);
@@ -38,7 +38,7 @@ public class ClusterTest {
 
         // So the reference can't change values
         Assert.assertEquals(clusterShallowCopy.getNodes().get(0), clusterOriginalEurope.getNodes().get(0));
-        Assert.assertEquals(EUR, clusterShallowCopy.getName());
+        Assert.assertEquals(EUROPE, clusterShallowCopy.getName());
 
     }
 
@@ -56,6 +56,6 @@ public class ClusterTest {
 
         // So the value is different
         Assert.assertNotEquals(clusterShallowCopy.getNodes().get(0), clusterOriginalEurope.getNodes().get(0));
-        Assert.assertEquals(EUR, clusterShallowCopy.getName());
+        Assert.assertEquals(EUROPE, clusterShallowCopy.getName());
     }
 }
