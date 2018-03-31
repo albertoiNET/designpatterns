@@ -13,7 +13,7 @@ public class ClusterTest {
     private Cluster clusterOriginalEurope;
 
     @Before
-    public void setUp() {
+    public void setup() {
         //Given
         clusterOriginalEurope = new Cluster("EUROPE");
         Node nodeOriginalMadrid = new Node("Madrid", 20480);
