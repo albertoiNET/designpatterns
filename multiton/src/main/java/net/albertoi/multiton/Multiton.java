@@ -31,7 +31,6 @@ class Multiton {
         }
     }
 
-
     static Multiton getInstance(MultitonType type) {
         createInstanceIfNeeded(type);
         LOGGER.log(Level.INFO, "Returning instance of type {0}", type);
