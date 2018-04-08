@@ -17,7 +17,7 @@ class Multiton {
     /**
      * Syncronized function for safe-thread
      *
-     * @param type Wich type of multiton instance will be created.
+     * @param type What type of multiton instance will be created.
      */
     private static synchronized void createInstanceIfNeeded(MultitonType type) {
         if (instances == null) {
@@ -32,7 +32,7 @@ class Multiton {
     }
 
 
-    public static Multiton getInstance(MultitonType type) {
+    static Multiton getInstance(MultitonType type) {
         createInstanceIfNeeded(type);
         LOGGER.log(Level.INFO, "Returning instance of type {0}", type);
 

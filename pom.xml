@@ -7,13 +7,14 @@
     <groupId>net.albertoi</groupId>
     <artifactId>design-patterns</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.3-SNAPSHOT</version>
 
     <modules>
         <module>singleton</module>
         <module>prototype</module>
         <module>builder</module>
         <module>multiton</module>
+        <module>factorymethod</module>
     </modules>
 
     <properties>

@@ -17,7 +17,7 @@ public class MultitonTest {
     }
 
     @Test
-    public void testDiferentInstanceType(){
+    public void testDifferentInstanceType(){
         Assert.assertNotEquals(Multiton.getInstance(MultitonType.ONE) , Multiton.getInstance(MultitonType.ZERO));
     }
 }
