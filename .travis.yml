@@ -11,5 +11,12 @@ cache:
   - $HOME/.sonar
 
 script:
-  - mvn clean verify install sonar:sonar
+  - mvn clean
+  - mvn verify
+  - mvn install
+  - mvn cobertura:cobertura
+  - mvn sonar:sonar
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
