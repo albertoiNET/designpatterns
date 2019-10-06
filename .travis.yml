@@ -3,7 +3,7 @@ sudo: false
 install: true
 
 jdk:
-  - oraclejdk9
+  - openjdk9
 
 cache:
   directories:
