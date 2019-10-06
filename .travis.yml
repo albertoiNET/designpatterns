@@ -11,7 +11,7 @@ cache:
   - $HOME/.sonar
 
 script:
-  - mvn -e clean install sonar:sonar
+  - mvn clean install sonar:sonar
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
