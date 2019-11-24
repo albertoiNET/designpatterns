@@ -9,7 +9,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>factorymethod</artifactId>
+    <artifactId>object-pool</artifactId>
+
+    <dependencies>
+        <dependency>
+            <artifactId>hsqldb</artifactId>
+            <groupId>org.hsqldb</groupId>
+            <version>2.5.0</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <derby.version>10.15.1.3</derby.version>
+    </properties>
 
 
 </project>

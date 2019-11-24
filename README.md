@@ -23,6 +23,10 @@ Software Designs Patterns. Based on book **Design Patterns. Elements of Reusable
   - Builder:
     - Separate the construction of a complex object from its representation so that the same construction process can 
     create different representations.
+    
+  - Object Pool:
+    - Creates a group of objects, that can be reused for boost performance. Usually this object are heavily and 
+    expensive. We can restrict the number of this heavy objects are created, and force the reuse.
 
 
 
