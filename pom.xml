@@ -107,6 +107,8 @@
         <sonar.host.url>${env.SONAR_HOST_URL}</sonar.host.url>
         <sonar.login>${env.SONAR_TOKEN}</sonar.login>
         <sonar.organization>${env.SONAR_ORGANIZATION}</sonar.organization>
+        <sonar.moduleKey>${artifactId}</sonar.moduleKey>
+        <sonar.projectKey>${env.SONAR_PROJECT_KEY}</sonar.projectKey>
     </properties>
 
     <version>0.3-SNAPSHOT</version>
