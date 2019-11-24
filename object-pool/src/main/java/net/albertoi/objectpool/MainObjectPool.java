@@ -9,12 +9,12 @@ import net.albertoi.objectpool.pool.DatabaseConnectionPool;
 public class MainObjectPool {
 
   public static void main(String[] args) throws SizeLimitExceededException {
-    DatabaseConnectionPool connectionPool = new DatabaseConnectionPool("org.hsqldb.jdbcDriver",
+    DatabaseConnectionPool pool = new DatabaseConnectionPool("org.hsqldb.jdbcDriver",
         "jdbc:hsqldb:mem:test", "SA", "");
-    connectionPool.init();
+    pool.init();
 
-    Connection con = connectionPool.get();
+    Connection con = pool.get();
 
-    connectionPool.free(con);
+    pool.free(con);
   }
 }
