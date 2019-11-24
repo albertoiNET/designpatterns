@@ -101,6 +101,12 @@
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <mockito.version>3.1.0</mockito.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Sonnar properties -->
+        <sonar.exclusions>**/Main*.java</sonar.exclusions>
+        <sonar.host.url>${env.SONAR_HOST_URL}</sonar.host.url>
+        <sonar.login>${env.SONAR_TOKEN}</sonar.login>
+        <sonar.organization>${env.SONAR_ORGANIZATION}</sonar.organization>
     </properties>
 
     <version>0.3-SNAPSHOT</version>
