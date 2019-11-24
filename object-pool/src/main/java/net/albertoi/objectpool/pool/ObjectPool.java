@@ -7,8 +7,8 @@ import javax.naming.SizeLimitExceededException;
 
 public abstract class ObjectPool<T> {
 
-  private final int minInstances = 2;
-  private final int maxInstances = 5;
+  private static final int minInstances = 2;
+  private static final int maxInstances = 5;
 
   private final Set<T> free;
   private final Set<T> busy;
@@ -33,7 +33,7 @@ public abstract class ObjectPool<T> {
 
   public synchronized T get() throws SizeLimitExceededException {
     T t;
-    if (free.size() > 0) {
+    if (!free.isEmpty()) {
       Iterator<T> iterator = free.iterator();
       while (iterator.hasNext()) {
         t = iterator.next();

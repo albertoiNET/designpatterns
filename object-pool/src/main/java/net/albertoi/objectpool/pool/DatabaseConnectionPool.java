@@ -17,7 +17,7 @@ public class DatabaseConnectionPool extends ObjectPool<Connection> {
     try {
       Class.forName(driver).getDeclaredConstructor().newInstance();
     } catch (Exception e) {
-      e.printStackTrace();
+      log.severe("Cannot create instance " + e.getMessage());
     }
     this.url = url;
     this.user = user;
