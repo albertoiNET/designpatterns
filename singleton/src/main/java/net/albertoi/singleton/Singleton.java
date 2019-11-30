@@ -1,11 +1,11 @@
 package net.albertoi.singleton;
 
-import java.util.logging.Logger;
+import lombok.extern.java.Log;
 
+@Log
 class Singleton {
-    private static Singleton singleton;
 
-    private static final Logger LOGGER = Logger.getLogger(Singleton.class.getName());
+    private static Singleton singleton;
 
     private Singleton() {
         // Do nothing
@@ -17,7 +17,7 @@ class Singleton {
     private static synchronized void createInstanceIfNeeded() {
         if (singleton == null) {
             singleton = new Singleton();
-            LOGGER.info("Instance created");
+            log.info("Instance created");
         }
     }
 
@@ -28,7 +28,7 @@ class Singleton {
      */
     static Singleton getInstance() {
         createInstanceIfNeeded();
-        LOGGER.info("Returning instance");
+        log.info("Returning instance");
         return singleton;
     }
 }

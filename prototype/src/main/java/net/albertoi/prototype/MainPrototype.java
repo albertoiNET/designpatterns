@@ -1,14 +1,13 @@
 package net.albertoi.prototype;
 
+import lombok.extern.java.Log;
 import net.albertoi.prototype.factory.PrototypeFactory;
 import net.albertoi.prototype.model.Cluster;
 import net.albertoi.prototype.model.Node;
 
-import java.util.logging.Logger;
-
+@Log
 public class MainPrototype {
 
-    private static final Logger LOGGER = Logger.getLogger(MainPrototype.class.getName());
 
 
     public static void main(String[] args) {
@@ -39,9 +38,9 @@ public class MainPrototype {
         }
         PrototypeFactory.addPrototype(sizeLCluster.getName(), sizeLCluster);
 
-        LOGGER.info(PrototypeFactory.getPrototype(miniClusterLabel)::toString);
-        LOGGER.info(PrototypeFactory.getPrototype(mediumClusterLabel)::toString);
-        LOGGER.info(PrototypeFactory.getPrototype(bigClusterLabel)::toString);
+        log.info(PrototypeFactory.getPrototype(miniClusterLabel).toString());
+        log.info(PrototypeFactory.getPrototype(mediumClusterLabel).toString());
+        log.info(PrototypeFactory.getPrototype(bigClusterLabel).toString());
 
     }
 

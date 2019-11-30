@@ -2,13 +2,12 @@ package net.albertoi.multiton;
 
 import java.util.EnumMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import lombok.extern.java.Log;
 
+@Log
 class Multiton {
-    private static Map<MultitonType, Multiton> instances;
 
-    private static final Logger LOGGER = Logger.getLogger(Multiton.class.getName());
+    private static Map<MultitonType, Multiton> instances;
 
     private Multiton() {
         // Do nothing
@@ -22,7 +21,7 @@ class Multiton {
     private static synchronized void createInstanceIfNeeded(MultitonType type) {
         if (instances == null) {
             instances = new EnumMap<>(MultitonType.class);
-            LOGGER.info("Instance created");
+            log.info("Instance created");
         }
 
         if (!instances.containsKey(type)) {
@@ -33,7 +32,7 @@ class Multiton {
 
     static Multiton getInstance(MultitonType type) {
         createInstanceIfNeeded(type);
-        LOGGER.log(Level.INFO, "Returning instance of type {0}", type);
+        log.info("Returning instance of type " + type);
 
         return instances.get(type);
     }

@@ -2,7 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>multiton</artifactId>
+  <artifactId>object-pool</artifactId>
+  <dependencies>
+    <dependency>
+      <artifactId>hsqldb</artifactId>
+      <groupId>org.hsqldb</groupId>
+      <version>2.5.0</version>
+    </dependency>
+  </dependencies>
+
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -10,6 +18,10 @@
     <groupId>net.albertoi</groupId>
     <version>0.3-SNAPSHOT</version>
   </parent>
+
+  <properties>
+    <derby.version>10.15.1.3</derby.version>
+  </properties>
 
 
 </project>
