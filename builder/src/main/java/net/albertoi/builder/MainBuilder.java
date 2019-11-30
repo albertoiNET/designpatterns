@@ -1,14 +1,12 @@
 package net.albertoi.builder;
 
+import lombok.extern.java.Log;
 import net.albertoi.builder.builder.CamaroBuilder;
 import net.albertoi.builder.builder.CruzeBuilder;
 import net.albertoi.builder.model.Chevrolet;
 
-import java.util.logging.Logger;
-
+@Log
 public class MainBuilder {
-
-    private static final Logger LOGGER = Logger.getLogger(MainBuilder.class.getName());
 
     public static void main(String[] args) {
         CarShop carShop = new CarShop();
@@ -17,12 +15,12 @@ public class MainBuilder {
         carShop.construct();
         Chevrolet cruze = carShop.getChevrolet();
 
-        LOGGER.info(cruze::toString);
+        log.info(String.valueOf(cruze));
 
         carShop.setChevroletBuilder(new CamaroBuilder());
         carShop.construct();
         Chevrolet camaro = carShop.getChevrolet();
 
-        LOGGER.info(camaro::toString);
+        log.info(String.valueOf(camaro));
     }
 }
