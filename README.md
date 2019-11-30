@@ -1,7 +1,7 @@
 # Designs Patterns 
 
 [![Travis-CI](https://api.travis-ci.org/albertoiNET/designpatterns.svg?branch=master)](https://travis-ci.org/albertoiNET/designpatterns) 
-[![SonarQube](https://sonarcloud.io/api/project_badges/measure?project=net.albertoi%3Adesign-patterns&metric=alert_status)](https://sonarcloud.io/dashboard?id=net.albertoi%3Adesign-patterns) 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=albertoiNET_designpatterns&metric=alert_status)](https://sonarcloud.io/dashboard?id=albertoiNET_designpatterns)
 [![codecov](https://codecov.io/gh/albertoiNET/designpatterns/branch/master/graph/badge.svg)](https://codecov.io/gh/albertoiNET/designpatterns)
 
   
@@ -23,6 +23,10 @@ Software Designs Patterns. Based on book **Design Patterns. Elements of Reusable
   - Builder:
     - Separate the construction of a complex object from its representation so that the same construction process can 
     create different representations.
+    
+  - Object Pool:
+    - Creates a group of objects, that can be reused for boost performance. Usually this object are heavily and 
+    expensive. We can restrict the number of this heavy objects are created, and force the reuse.
 
 
 
