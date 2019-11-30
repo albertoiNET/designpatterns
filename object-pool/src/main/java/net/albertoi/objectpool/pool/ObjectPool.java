@@ -7,8 +7,8 @@ import javax.naming.SizeLimitExceededException;
 
 public abstract class ObjectPool<T> {
 
-  private static final int minInstances = 2;
-  private static final int maxInstances = 5;
+  private static final int MIN_INSTANCES = 2;
+  private static final int MAX_INSTANCES = 5;
 
   private final Set<T> free;
   private final Set<T> busy;
@@ -20,7 +20,7 @@ public abstract class ObjectPool<T> {
   }
 
   public synchronized void init() {
-    for (int i = 0; i < minInstances; i++) {
+    for (int i = 0; i < MIN_INSTANCES; i++) {
       this.free.add(create());
     }
   }
@@ -49,7 +49,7 @@ public abstract class ObjectPool<T> {
       }
     }
 
-    if (busy.size() < maxInstances) {
+    if (busy.size() < MAX_INSTANCES) {
       t = create();
       busy.add(t);
       return t;

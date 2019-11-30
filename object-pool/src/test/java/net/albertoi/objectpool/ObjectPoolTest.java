@@ -94,11 +94,11 @@ public class ObjectPoolTest {
 
   @Test(expected = SizeLimitExceededException.class)
   public void testOverSizeConnections() throws SizeLimitExceededException {
-    Connection con1 = pool.get();
-    Connection con2 = pool.get();
-    Connection con3 = pool.get();
-    Connection con4 = pool.get();
-    Connection con5 = pool.get();
-    Connection con6 = pool.get();
+    pool.get();
+    pool.get();
+    pool.get();
+    pool.get();
+    pool.get();
+    pool.get();
   }
 }
