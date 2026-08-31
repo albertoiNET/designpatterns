@@ -6,7 +6,7 @@
 originales y ejecutables.**
 
 [![CI](https://img.shields.io/github/actions/workflow/status/albertoiNET/designpatterns/ci.yml?branch=master&style=for-the-badge&label=build)](https://github.com/albertoiNET/designpatterns/actions/workflows/ci.yml)
-[![Java 17+](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
+[![Java 21](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Catálogo 22/22](https://img.shields.io/badge/Cat%C3%A1logo-22%2F22-2E8B57?style=for-the-badge)](#catálogo)
 [![License](https://img.shields.io/github/license/albertoiNET/designpatterns?style=for-the-badge)](LICENSE)
 
@@ -24,7 +24,7 @@ sin esconder su estructura detrás de frameworks.
   [Refactoring.Guru](https://refactoring.guru/design-patterns).
 - Participantes del patrón separados en clases e interfaces fáciles de localizar.
 - Una clase `Main...` para recorrer el ejemplo y pruebas que demuestran su comportamiento.
-- Java 17 como versión mínima, JUnit Jupiter y cobertura con JaCoCo.
+- Java 21, JUnit Jupiter y cobertura con JaCoCo.
 
 > **Alcance:** Refactoring.Guru reúne 22 patrones basados en el catálogo GoF. El patrón
 > Interpreter, presente en el libro original pero no en esa referencia web, queda fuera
@@ -90,7 +90,7 @@ flowchart LR
 
 ## Puesta en marcha
 
-Necesitas **JDK 17 o superior** y **Maven 3.9 o superior**.
+Necesitas **JDK 21** y **Maven 3.9 o superior**.
 
 ```bash
 git clone https://github.com/albertoiNET/designpatterns.git
@@ -132,12 +132,12 @@ Una forma práctica de estudiar cada módulo:
 
 | Componente | Versión | Uso |
 |---|---:|---|
-| Java | 17+ | Lenguaje y API base |
+| Java | 21 | Lenguaje y API base |
 | JUnit Jupiter | 6.1.3 | Pruebas |
 | Lombok | 1.18.46 | Reducción de código repetitivo en ejemplos existentes |
 | HSQLDB | 2.7.4 | Base de datos en memoria del Object Pool |
 | JaCoCo | 0.8.15 | Cobertura |
-| Maven Compiler Plugin | 3.15.0 | Compilación reproducible para Java 17 |
+| Maven Compiler Plugin | 3.15.0 | Compilación reproducible para Java 21 |
 | Maven Enforcer Plugin | 3.6.3 | Validación de las versiones mínimas del entorno |
 | Maven Surefire Plugin | 3.5.6 | Ejecución de pruebas |
 
