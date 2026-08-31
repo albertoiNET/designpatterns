@@ -1,26 +1,26 @@
 package net.albertoi.factorymethod;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class FactoryMethodTest {
     private Creator creator;
 
-    @Before
-    public void setup() {
+    @BeforeEach
+    void setup() {
         creator = new ConcreteCreator();
     }
 
     @Test
-    public void testFactoryMethod() {
-        Assert.assertNotNull(creator);
-        Assert.assertTrue(creator instanceof ConcreteCreator);
+    void testFactoryMethod() {
+        assertNotNull(creator);
+        assertInstanceOf(ConcreteCreator.class, creator);
 
-        Object object = creator.factoryMethod();
-        Assert.assertFalse(object instanceof ConcreteCreator);
-        Assert.assertTrue(object instanceof ConcreteProduct);
-
-        ((Product) object).operation();
+        Product product = creator.factoryMethod();
+        assertInstanceOf(ConcreteProduct.class, product);
+        product.operation();
     }
 }
