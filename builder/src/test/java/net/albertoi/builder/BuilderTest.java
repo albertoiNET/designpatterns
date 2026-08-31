@@ -2,21 +2,23 @@ package net.albertoi.builder;
 
 import net.albertoi.builder.builder.CamaroBuilder;
 import net.albertoi.builder.builder.CruzeBuilder;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class BuilderTest {
 
     private CarShop carShop;
 
-    @Before
-    public void setup(){
+    @BeforeEach
+    void setup() {
         carShop = new CarShop();
     }
 
     @Test
-    public void testConstructCruze(){
+    void testConstructCruze() {
         // Given
         carShop.setChevroletBuilder(new CruzeBuilder());
 
@@ -24,12 +26,12 @@ public class BuilderTest {
         carShop.construct();
 
         // Then
-        Assert.assertNotNull(carShop.getChevrolet().toString());
-        Assert.assertEquals("Cruze", carShop.getChevrolet().getName());
+        assertNotNull(carShop.getChevrolet().toString());
+        assertEquals("Cruze", carShop.getChevrolet().getName());
     }
 
     @Test
-    public void testConstructCamaro(){
+    void testConstructCamaro() {
         // Given
         carShop.setChevroletBuilder(new CamaroBuilder());
 
@@ -37,7 +39,7 @@ public class BuilderTest {
         carShop.construct();
 
         // Then
-        Assert.assertNotNull(carShop.getChevrolet().toString());
-        Assert.assertEquals("Camaro", carShop.getChevrolet().getName());
+        assertNotNull(carShop.getChevrolet().toString());
+        assertEquals("Camaro", carShop.getChevrolet().getName());
     }
 }
