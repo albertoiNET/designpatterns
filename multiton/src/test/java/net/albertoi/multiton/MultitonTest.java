@@ -1,23 +1,26 @@
 package net.albertoi.multiton;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class MultitonTest {
 
     @Test
-    public void testGetInstance(){
-        Assert.assertNotNull(Multiton.getInstance(MultitonType.TWO));
-        Assert.assertNotNull(Multiton.getInstance(MultitonType.TWO));
+    void testGetInstance() {
+        assertNotNull(Multiton.getInstance(MultitonType.TWO));
+        assertNotNull(Multiton.getInstance(MultitonType.TWO));
     }
 
     @Test
-    public void testUniqueInstance(){
-        Assert.assertEquals(Multiton.getInstance(MultitonType.ZERO) , Multiton.getInstance(MultitonType.ZERO));
+    void testUniqueInstance() {
+        assertSame(Multiton.getInstance(MultitonType.ZERO), Multiton.getInstance(MultitonType.ZERO));
     }
 
     @Test
-    public void testDifferentInstanceType(){
-        Assert.assertNotEquals(Multiton.getInstance(MultitonType.ONE) , Multiton.getInstance(MultitonType.ZERO));
+    void testDifferentInstanceType() {
+        assertNotSame(Multiton.getInstance(MultitonType.ONE), Multiton.getInstance(MultitonType.ZERO));
     }
 }
