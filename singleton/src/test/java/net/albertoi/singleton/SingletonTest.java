@@ -1,19 +1,20 @@
 package net.albertoi.singleton;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class SingletonTest {
 
     @Test
-    public void testGetInstance(){
-        Assert.assertNotNull(Singleton.getInstance());
-        Assert.assertNotNull(Singleton.getInstance());
+    void testGetInstance() {
+        assertNotNull(Singleton.getInstance());
+        assertNotNull(Singleton.getInstance());
     }
 
     @Test
-    public void testUniqueInstance(){
-        Assert.assertEquals(Singleton.getInstance() , Singleton.getInstance());
+    void testUniqueInstance() {
+        assertSame(Singleton.getInstance(), Singleton.getInstance());
     }
 }
-
