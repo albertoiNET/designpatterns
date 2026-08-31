@@ -11,15 +11,9 @@ permissions:
 
 jobs:
   build:
-    name: Java ${{ matrix.java }}
+    name: Java 21
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    strategy:
-      fail-fast: false
-      matrix:
-        java:
-          - "17"
-          - "21"
 
     steps:
       - name: Check out repository
@@ -29,7 +23,7 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: ${{ matrix.java }}
+          java-version: "21"
           cache: maven
 
       - name: Build and test
